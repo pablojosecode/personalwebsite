@@ -65,7 +65,7 @@ export default async function GuestbookPage() {
       "description": "Coded a VR game centered around alleviating loneliness",
       "bullets": ["Bullet Point 1", "Bullet Point 2", "Bullet Point 3"],
       "tech": "Technologies: C#, Unity, HTC Vive, XR SDKs",
-      "website": "https://vocalaifrontend.vercel.app"
+      "website": "https://github.com/HackXR-2023/"
     },
     {
       "project": "ETH San Francisco",
@@ -73,7 +73,7 @@ export default async function GuestbookPage() {
       "description": "Built a liquidity routing protocol for NFT AMM supporting multiple EVM chains",
       "bullets": ["Bullet Point 1", "Bullet Point 2", "Bullet Point 3"],
       "tech": "Technologies: Python, Pytorch, Dreambooth, Stable Diffusion, AWS (S3, Cloudfront, Cognito, API Gateway, Lambda, SQS, EC2, SKS), NextJS/React, Typescript",
-      "website": "https://vocalaifrontend.vercel.app"
+      "website": "https://ethglobal.com/showcase/tapp-finance-sw413"
     },
     {
       "project": "Calhacks 9.0",
@@ -81,7 +81,7 @@ export default async function GuestbookPage() {
       "description": "First Place- Bounty Program",
       "bullets": ["Bullet Point 1", "Bullet Point 2", "Bullet Point 3"],
       "tech": "Technologies: Solana, Solidity, Rust, Orca SDK, Jupiter SDK, ReactJS",
-      "website": "https://www.google.com"
+      "website": "https://live.calhacks.io/"
     },
     {
       "project": "USF Sustainability Challenge",
@@ -89,7 +89,7 @@ export default async function GuestbookPage() {
       "description": "Company focusing on creator-based tools",
       "bullets": ["Bullet Point 1", "Bullet Point 2", "Bullet Point 3"],
       "tech": "Technologies: technology 1, programming language, etc. with words",
-      "website": "https://www.google.com"
+      "website": "https://myusf.usfca.edu/sustainability/sustainability-design-challenge"
     }
   ]
 
