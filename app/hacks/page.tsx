@@ -8,6 +8,9 @@ import github from "./github.png";
 import website from "./website.png";
 import Image from 'next/image';
 import { features } from 'process';
+import Link from 'next/link';
+import info from '../projects/info.png'
+
 
 async function getGuestbook() {
 
@@ -59,15 +62,15 @@ export default async function GuestbookPage() {
     {
       "project": "MIT Reality Hack",
       "date": "January 2023",
-      "description": "Built various products centered around new AI technologies",
+      "description": "Coded a VR game centered around alleviating loneliness",
       "bullets": ["Bullet Point 1", "Bullet Point 2", "Bullet Point 3"],
-      "tech": "Technologies: Python, Pytorch, Dreambooth, Stable Diffusion, AWS (S3, Cloudfront, Cognito, API Gateway, Lambda, SQS, EC2, SKS), NextJS/React, Typescript",
+      "tech": "Technologies: C#, Unity, HTC Vive, XR SDKs",
       "website": "https://vocalaifrontend.vercel.app"
     },
     {
       "project": "ETH San Francisco",
       "date": "November 2022",
-      "description": "Built various products centered around new AI technologies",
+      "description": "Built a liquidity routing protocol for NFT AMM supporting multiple EVM chains",
       "bullets": ["Bullet Point 1", "Bullet Point 2", "Bullet Point 3"],
       "tech": "Technologies: Python, Pytorch, Dreambooth, Stable Diffusion, AWS (S3, Cloudfront, Cognito, API Gateway, Lambda, SQS, EC2, SKS), NextJS/React, Typescript",
       "website": "https://vocalaifrontend.vercel.app"
@@ -77,7 +80,7 @@ export default async function GuestbookPage() {
       "date": "October 2022",
       "description": "First Place- Bounty Program",
       "bullets": ["Bullet Point 1", "Bullet Point 2", "Bullet Point 3"],
-      "tech": "Technologies: technology 1, programming language, etc. with words",
+      "tech": "Technologies: Solana, Solidity, Rust, Orca SDK, Jupiter SDK, ReactJS",
       "website": "https://www.google.com"
     },
     {
@@ -88,65 +91,143 @@ export default async function GuestbookPage() {
       "tech": "Technologies: technology 1, programming language, etc. with words",
       "website": "https://www.google.com"
     }
-    //, {
-    //   "project": "Speech Helper",
-    //   "date": "Jan 2022",
-    //   "description": "Company focusing on creator-based tools",
-    //   "bullets": ["Bullet Point 1", "Bullet Point 2", "Bullet Point 3"],
-    //   "tech": "Technologies: technology 1, programming language, etc. with words",
-    //   "website": "https://www.google.com"
-    // },
-    // {
-    //   "project": "Sustainability Dashboard",
-    //   "date": "Jan 2022",
-    //   "description": "Led a task force of students to rebuild university's energy dashboard",
-    //   "bullets": ["Bullet Point 1", "Bullet Point 2", "Bullet Point 3"],
-    //   "tech": "Technologies: technology 1, programming language, etc. with words",
-    //   "website": "https://www.google.com"
-    // }
-
   ]
+
+
+
+
+  // const largeDescriptions = [
+  //   {
+  // "project": "MIT Reality Hack",
+  // "date": "January 2023",
+  // "description": "Built various products centered around new AI technologies",
+  // "bullets": ["Bullet Point 1", "Bullet Point 2", "Bullet Point 3"],
+  // "tech": "Technologies: Python, Pytorch, Dreambooth, Stable Diffusion, AWS (S3, Cloudfront, Cognito, API Gateway, Lambda, SQS, EC2, SKS), NextJS/React, Typescript",
+  // "website": "https://vocalaifrontend.vercel.app"
+  //   },
+  //   {
+  //     "project": "ETH San Francisco",
+  //     "date": "November 2022",
+  //     "description": "Built various products centered around new AI technologies",
+  //     "bullets": ["Bullet Point 1", "Bullet Point 2", "Bullet Point 3"],
+  //     "tech": "Technologies: Python, Pytorch, Dreambooth, Stable Diffusion, AWS (S3, Cloudfront, Cognito, API Gateway, Lambda, SQS, EC2, SKS), NextJS/React, Typescript",
+  //     "website": "https://vocalaifrontend.vercel.app"
+  //   },
+  //   {
+  //     "project": "Calhacks 9.0",
+  //     "date": "October 2022",
+  //     "description": "First Place- Bounty Program",
+  //     "bullets": ["Bullet Point 1", "Bullet Point 2", "Bullet Point 3"],
+  //     "tech": "Technologies: technology 1, programming language, etc. with words",
+  //     "website": "https://www.google.com"
+  //   },
+  //   {
+  //     "project": "USF Sustainability Challenge",
+  //     "date": "Second Place",
+  //     "description": "Company focusing on creator-based tools",
+  //     "bullets": ["Bullet Point 1", "Bullet Point 2", "Bullet Point 3"],
+  //     "tech": "Technologies: technology 1, programming language, etc. with words",
+  //     "website": "https://www.google.com"
+  //   }
+  //   //, {
+  //   //   "project": "Speech Helper",
+  //   //   "date": "Jan 2022",
+  //   //   "description": "Company focusing on creator-based tools",
+  //   //   "bullets": ["Bullet Point 1", "Bullet Point 2", "Bullet Point 3"],
+  //   //   "tech": "Technologies: technology 1, programming language, etc. with words",
+  //   //   "website": "https://www.google.com"
+  //   // },
+  //   // {
+  //   //   "project": "Sustainability Dashboard",
+  //   //   "date": "Jan 2022",
+  //   //   "description": "Led a task force of students to rebuild university's energy dashboard",
+  //   //   "bullets": ["Bullet Point 1", "Bullet Point 2", "Bullet Point 3"],
+  //   //   "tech": "Technologies: technology 1, programming language, etc. with words",
+  //   //   "website": "https://www.google.com"
+  //   // }
+
+  // ]
 
   return (
     <section className="text-black font-serif">
       <h1 className="font-bold text-7xl font-serif mb-5">Hacks</h1>
       {
         largeDescriptions.map(d =>
-          <p className='leading-none pt-6 text-4xl'>
-            {d.project} <span className='text-xl'>{d.date}</span>
-            <br />
-            <span className='text-lg'>
-              {d.description}
-            </span>
+          <Link
+            target='_blank'
+            href={d.website}>
+            <p
 
-            <ul className='ml-5 text-md list-disc'>
-              {d.bullets.map(bullet =>
-                <li>
-                  {bullet}
-                </li>
-              )}
-            </ul>
-            <span className='leading-none text-xs'>
-              {d.tech}
-            </span>
-            {/* <github /> */}
-            <div className='pt-2 flex gap-x-2'>
-              <Image
-                className='cursor-pointer h-5 w-5'
-                alt='github'
-                src={github} />
-              <button
-                className='cursor-pointer h-5 w-5'
-              // onSubmit={() => console.log("HI")}
-              >
-                <Image
-                  // onClick={() => window.open(d.website, "_blank")}
+              className="max-w-2xl bg-gradient-to-r rounded-xl py-6 px-5 cursor-pointer  transition duration-200 active:scale-90 active:  from-emerald-100 to-fuchsia-200 leading-none mt-6 text-4xl hover:bg-gradient-to-r hover:scale-105 hover:from-emerald-200 hover:to-fuchsia-300">
+              {d.project} <span className='text-xl'>{d.date}</span>
+              <br />
+              <span className='text-sm leading-0'>
+                {d.description}
+              </span>
 
-                  alt='website'
-                  src={website} />
-              </button>
-            </div>
-          </p>
+              <ul className='pt-3 ml-5 text-lg  list-disc'>
+                {d.bullets.map(bullet =>
+                  <>{
+                    d.hasOwnProperty("special") ?
+                      <li className="mt-2 rounded-none px-1 py-1 hover:bg-gradient-to-r  hover:from-blue-400 hover:to-blue-400 bg-gradient-to-r from-blue-400 to-blue-400">
+                        {bullet}
+                      </li> :
+                      <li>
+                        {bullet}
+                      </li>
+                  }
+                  </>
+                )}
+              </ul>
+              <span className='text-sm'></span> <br />
+              <span className='leading-1 text-xs'>
+                {d.tech}
+              </span>
+              {/* <github /> */}
+              <div className='pt-2 flex gap-x-2'>
+                {
+                  d.hasOwnProperty("github") &&
+                  <Link
+                    target='_blank'
+                    href="https://github.com">
+                    <Image
+                      className='cursor-pointer h-5 w-5'
+                      alt='github'
+                      src={github} />
+                  </Link>
+                }
+                {
+                  d.hasOwnProperty("website") &&
+                  <Link
+                    target='_blank'
+                    href="https://github.com">
+
+                    <Image
+                      // onClick={() => window.open(d.website, "_blank")}
+                      className='cursor-pointer h-5 w-5'
+
+                      alt='website'
+                      src={website} />
+                  </Link>
+                }
+                {
+                  d.hasOwnProperty("info") &&
+                  <Link
+                    target='_blank'
+                    href="https://github.com">
+
+                    <Image
+                      // onClick={() => window.open(d.website, "_blank")}
+                      className='cursor-pointer h-5 w-5'
+
+                      alt='website'
+                      src={info} />
+                  </Link>
+                }
+
+              </div>
+            </p>
+          </Link>
 
         )
 

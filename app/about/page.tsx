@@ -14,39 +14,31 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <section>
-      <h1 className="font-bold text-3xl font-serif">About Me</h1>
-      <p className="my-5 text-neutral-800 dark:text-neutral-200">
+      <h1 className="font-bold text-5xl font-serif">About Me</h1>
+      <p className="my-5 text-2xl text-neutral-800 dark:text-neutral-200">
         Hey, I'm Pablo.
       </p>
-      <div className="prose prose-neutral dark:prose-invert text-neutral-800 dark:text-neutral-200">
+      <div className="text-xl prose prose-neutral dark:prose-invert text-neutral-800 dark:text-neutral-200">
         <p>
-          I'm currently a <b>Software Engineer at a stealth startups</b>, where I
+          I'm currently a <b>Software Engineer at a stealth startup</b>, where I
           work on AI and architecting sustainable full-stack products.
         </p>
         <hr />
         <p>
           In my spare time, I'm passionate about many creative pursuits, including guitar, piano, literature,
-          and of course, coding.
+          and of course, coding. You might catch me some days busking at Fisherman's Wharf!
         </p>
         <p>
-          I <b>love</b> building for the web. From something as simple as a
-          single HTML file – all the way to large Next.js applications. The web
-          is incredible. Anyone can become a developer, writer, or creator – and
-          no one has to ask for permission. You can just build.
-        </p>
-        <p className="mb-8">
-          Outside of Vercel, I <b>angel invest</b> in developer tools companies
-          and <b>advise early-stage startups</b>. I also do Developer Relations
-          consulting work, helping companies take their DevRel function from 0
-          to 1, or provide guidance on growing communities, content creation,
-          and developer marketing.
+          I absolutely love the creation process of software engineering- having an idea in my head 
+          and seeing it come to life in real life is what drives me every day. I feel the same 
+          inspiration when it comes to music. 
         </p>
         <div className="flex flex-col gap-2 md:flex-row md:gap-2">
           <a
             rel="noopener noreferrer"
             target="_blank"
             href="https://twitter.com/thepablohansen"
-            className="flex w-full border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 no-underline items-center text-neutral-800 dark:text-neutral-200 hover:dark:bg-neutral-900 hover:bg-neutral-100 transition-all justify-between"
+            className="flex w-full border border-neutral-200 dark:border-neutral-800 p-4 no-underline items-center text-neutral-800 dark:text-neutral-200 hover:dark:bg-neutral-900 hover:bg-neutral-100 transition-all justify-between"
           >
             <div className="flex items-center">
               <TwitterIcon />
@@ -58,7 +50,7 @@ export default function AboutPage() {
             rel="noopener noreferrer"
             target="_blank"
             href="https://github.com/pablojosecodes"
-            className="flex w-full border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 no-underline items-center text-neutral-800 dark:text-neutral-200 hover:dark:bg-neutral-900 hover:bg-neutral-100 transition-all justify-between"
+            className="flex w-full border border-neutral-200 dark:border-neutral-800  p-4 no-underline items-center text-neutral-800 dark:text-neutral-200 hover:dark:bg-neutral-900 hover:bg-neutral-100 transition-all justify-between"
           >
             <div className="flex items-center">
               <GitHubIcon />
@@ -70,7 +62,7 @@ export default function AboutPage() {
             rel="noopener noreferrer"
             target="_blank"
             href="https://www.youtube.com/@thepablohansen"
-            className="flex w-full border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 no-underline items-center text-neutral-800 dark:text-neutral-200 hover:dark:bg-neutral-900 hover:bg-neutral-100 transition-all justify-between"
+            className="flex w-full border border-neutral-200 dark:border-neutral-800 p-4 no-underline items-center text-neutral-800 dark:text-neutral-200 hover:dark:bg-neutral-900 hover:bg-neutral-100 transition-all justify-between"
           >
             <div className="flex items-center">
               <YoutubeIcon />

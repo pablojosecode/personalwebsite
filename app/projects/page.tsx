@@ -175,7 +175,8 @@ export default async function GuestbookPage() {
             target='_blank'
             href={d.website}>
             <p
-              className='max-w-2xl bg-gradient-to-r rounded-xl py-6 px-5 cursor-pointer hover:bg-gradient-to-r transition duration-200 active:scale-90 active:  hover:scale-105 hover:from-emerald-200 hover:to-fuchsia-300 from-emerald-100 to-fuchsia-200 leading-none mt-6 text-4xl'>
+            
+              className={'max-w-2xl bg-gradient-to-r rounded-xl py-6 px-5 cursor-pointer  transition duration-200 active:scale-90 active:  from-emerald-100 to-fuchsia-200 leading-none mt-6 text-4xl' + 'hover:bg-gradient-to-r hover:scale-105 hover:from-emerald-200 hover:to-fuchsia-300'  }>
               {d.project} <span className='text-xl'>{d.date}</span>
               <br />
               <span className='text-sm leading-0'>
@@ -186,7 +187,7 @@ export default async function GuestbookPage() {
                 {d.bullets.map(bullet =>
                   <>{
                     d.hasOwnProperty("special") ?
-                      <li className="mt-2 rounded-xl px-1 py-1 hover:bg-gradient-to-r  hover:from-blue-400 hover:to-blue-400 bg-gradient-to-r from-blue-200 to-blue-400">
+                      <li className="mt-2 rounded-none px-1 py-1 hover:bg-gradient-to-r  hover:from-blue-400 hover:to-blue-400 bg-gradient-to-r from-blue-400 to-blue-400">
                         {bullet}
                       </li> :
                       <li>

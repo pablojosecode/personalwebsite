@@ -12,9 +12,6 @@ const navItems = {
   '/about': {
     name: 'about',
   },
-  '/blog': {
-    name: 'blog',
-  },
   '/projects': {
     name: 'projects',
   },
@@ -26,7 +23,11 @@ const navItems = {
 function Logo() {
   return (
     <Link aria-label="Pablo Hansen" href="/">
-      <motion.svg
+      <p className='text-5xl'>
+      P
+        </p>
+
+      {/* <motion.svg
         className="text-black dark:text-white h-[25px] md:h-[37px]"
         width="25"
         height="37"
@@ -63,7 +64,7 @@ function Logo() {
           d="M232 314.998H129.852L232 232.887V314.998Z"
           fill="currentColor"
         />
-      </motion.svg>
+      </motion.svg> */}
     </Link>
   );
 }
