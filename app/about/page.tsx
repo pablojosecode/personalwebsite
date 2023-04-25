@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <section>
+    <div>
       <h1 className="font-bold text-5xl font-serif">About Me</h1>
       <p className="my-5 text-2xl text-neutral-800 dark:text-neutral-200">
         Hey, I'm Pablo.
@@ -29,9 +29,9 @@ export default function AboutPage() {
           and of course, coding. You might catch me some days busking at Fisherman's Wharf!
         </p>
         <p>
-          I absolutely love the creation process of software engineering- having an idea in my head 
-          and seeing it come to life in real life is what drives me every day. I feel the same 
-          inspiration when it comes to music. 
+          I absolutely love the creation process of software engineering- having an idea in my head
+          and seeing it come to life in real life is what drives me every day. I feel the same
+          inspiration when it comes to music.
         </p>
         <div className="flex flex-col gap-2 md:flex-row md:gap-2">
           <a
@@ -72,6 +72,6 @@ export default function AboutPage() {
           </a>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
